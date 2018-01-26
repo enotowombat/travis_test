@@ -22,7 +22,7 @@ install:
   - sudo unzip terraform.zip -d /home/travis/bin
   - wget -O tflint.zip https://github.com/wata727/tflint/releases/download/v0.5.4/tflint_linux_amd64.zip
   - sudo unzip tflint.zip -d /home/travis/bin
-  - pip install ansible -r ansible/requirements.txt
+  - pip install ansible
   - pip install ansible-lint
 
 before_script:
