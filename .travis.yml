@@ -42,8 +42,8 @@ before_script:
   - cp ./terraform.tfvars ../prod/
 
 script:
-  - cd ${WD}/packer
-  - /home/travis/bin/packer validate --var-file=variables.json.example db.json
+  - cd ${WD}
+  - /home/travis/bin/packer validate --var-file=packer/variables.json.example packer/db.json
   - cd ${WD}/ansible
   - test -f playbooks/site.yml
   - ansible-lint playbooks/site.yml
