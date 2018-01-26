@@ -27,7 +27,6 @@ install:
 
 before_script:
   - /home/travis/bin/packer --version
-  - pwd
   - WD=$(pwd)
   - touch ~/.ssh/appuser.pub && touch ~/.ssh/appuser
   - cd ${WD}/terraform/stage
