@@ -41,8 +41,8 @@ script:
   - cd ${WD}/terraform/stage
   - terraform init
   - terraform validate -var-file=terraform.tfvars.example
-  - tflint --error-with-issues -var-file=terraform.tfvars.example
+  - tflint --error-with-issues --var-file=terraform.tfvars.example
   - cd ${WD}/terraform/prod
   - terraform init
   - terraform validate -var-file=terraform.tfvars.example
-  - tflint --error-with-issues -var-file=terraform.tfvars.example
+  - tflint --error-with-issues --var-file=terraform.tfvars.example
