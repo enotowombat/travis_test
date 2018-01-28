@@ -29,6 +29,8 @@ install:
 before_script:
   - WD=$(pwd)
   - touch ~/.ssh/appuser.pub && touch ~/.ssh/appuser
+  - rm terraform/stage/backend.tf
+  - rm terraform/prod/backend.tf
 
 script:
   - cd ${WD}
