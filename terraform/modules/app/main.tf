@@ -59,7 +59,12 @@ resource "google_compute_firewall" "firewall_puma" {
 
   allow {
     protocol = "tcp"
-    ports    = ["9292", "80"]
+    ports    = ["9292"]
+  }
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80"]
   }
 
   source_ranges = ["0.0.0.0/0"]
